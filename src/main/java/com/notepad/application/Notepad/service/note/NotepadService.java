@@ -1,4 +1,4 @@
-package com.notepad.application.Notepad.service;
+package com.notepad.application.Notepad.service.note;
 
 import com.notepad.application.Notepad.dto.NotePadDTO;
 import com.notepad.application.Notepad.Model.Note;

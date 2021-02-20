@@ -2,7 +2,7 @@ package com.notepad.application.Notepad.controller;
 
 import com.notepad.application.Notepad.dto.NotePadDTO;
 import com.notepad.application.Notepad.Model.Note;
-import com.notepad.application.Notepad.service.NotepadServiceImplementation;
+import com.notepad.application.Notepad.service.note.NotepadServiceImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -25,5 +25,10 @@ public class User {
     @OneToOne
     private Notepad notepad;
 
+    private String email;
+
+    private String password;
+    private String phoneNumber;
+
 
 }

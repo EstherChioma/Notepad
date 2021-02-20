@@ -1,8 +1,9 @@
-package com.notepad.application.Notepad.service;
+package com.notepad.application.Notepad.service.note;
 
 import com.notepad.application.Notepad.dto.NotePadDTO;
 import com.notepad.application.Notepad.Model.Note;
 import com.notepad.application.Notepad.repository.NotepadRepo;
+import com.notepad.application.Notepad.service.note.NotepadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
