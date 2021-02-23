@@ -26,6 +26,7 @@ public class UserServiceImpl  implements UserService{
         user.setFirstName(userDto.getFirstName());
         user.setLastName(userDto.getLastName());
         user.setEmail(userDto.getEmail());
+        //@Todo lookup bycrypt and encrpt the password on your db.
         user.setPassword(userDto.getPassword());
         user.setPhoneNumber(userDto.getPhoneNumber());
 
@@ -35,6 +36,7 @@ public class UserServiceImpl  implements UserService{
 
     @Override
     public String login(LoginDto loginDto) {
+        //@Todo nice work, there is a bug in this code, try and login with a wrong email... and fix the bug
 
         User loginUser = userRepo.findUserByEmail(loginDto.getEmail());
 

@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController("/")
 public class userController {
 
+    //@Todo please delete unused instance variables
     UserRepo userRepo;
     UserDto userDto;
 
+    //@Todo please delete this method
     public UserDto userDto() {
         return new UserDto();
     }
@@ -22,6 +24,7 @@ public class userController {
     @Autowired
     UserServiceImpl userService;
 
+    //@Todo please delete this instance variable
     User user;
 
     @PostMapping("/signup")

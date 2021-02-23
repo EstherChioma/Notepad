@@ -12,6 +12,8 @@ import java.util.List;
 @RestController
 public class Controller {
 
+    //@Todo you need to update this controller now that you have users.
+
 
     private NotepadServiceImplementation notepadServiceImpl;
 
@@ -22,6 +24,7 @@ public class Controller {
 
     }
 
+    //@Todo If i save a note, let it the note be saved as mine.
     // save a note
     @PostMapping("/save")
     public Note saveNotepad(@RequestBody NotePadDTO notepad){
@@ -30,6 +33,7 @@ public class Controller {
 
 
     // get all note
+    //@Todo I should only be able to get the notes i saved not all the note on the db
     @GetMapping("/getall")
     public List<Note> getAllNotpad(){
 
@@ -37,6 +41,7 @@ public class Controller {
     }
 
     // edit a notepad
+    //@Todo I should be able to update my note and not your own note.
     @PutMapping("/{id}")
     public Note updateNotepad(@PathVariable Long id, @RequestBody Note notepad){
 
@@ -44,11 +49,14 @@ public class Controller {
     }
 
     // delete a particlar notepad
+    //@Todo I should be able to delete my own note but i should get an error when i try to delete yours
     @DeleteMapping("/{id}")
     public void deleteNotepad(@PathVariable Long id){
         notepadServiceImpl.deleteNoteByNoteId(id);
     }
 
+
+    //@Todo I should be able to get only my notes even if i have an id.
     // find a particlar notepad
     @GetMapping("/{id}")
     public Note findANote(@PathVariable Long id){
