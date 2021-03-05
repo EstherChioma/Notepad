@@ -1,14 +1,9 @@
 package com.notepad.application.Notepad.repository;
 
 import com.notepad.application.Notepad.Model.Note;
-import com.notepad.application.Notepad.Model.Notepad;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface NoteRepo extends JpaRepository<Note,Long> {
 
-public interface NotepadRepo extends JpaRepository<Notepad, Long>{
-
-    Notepad findNotepadById(Long id);
-
-
-
+    Note findNoteById(Long id);
 }

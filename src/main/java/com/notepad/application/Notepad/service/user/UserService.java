@@ -11,10 +11,10 @@ import java.util.List;
 public interface UserService {
 
 
-    User addUser(UserDto userDto);
-//    List<User> findAllUser ();
+    User save(UserDto userDto) throws UserAlreadayExistException;
+
+    List<User> findAllUser();
 
     String login(LoginDto loginDto);
 
-    User getUserByEmail(String email);
 }

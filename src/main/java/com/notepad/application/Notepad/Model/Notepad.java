@@ -25,9 +25,21 @@ public class Notepad {
 
     private String name;
 
+    @OneToOne(fetch = FetchType.EAGER)
+    private User user;
+
     @CreationTimestamp
     private Date dateCreated;
 
     @OneToMany
-    private List<Note> noteCollection = new ArrayList<>();
+    private List<Note> noteCollection;
+
+    // adding a note to note collection
+    public void addNote(Note note){
+
+        if(noteCollection == null){
+            noteCollection = new ArrayList<>();
+        }
+        noteCollection.add(note);
+    }
 }
